@@ -8,8 +8,15 @@ body {
   header {
     background: #4c2a85;
     color: white;
-    padding: 1rem;
+    padding: 1rem 2rem;
     text-align: center;
+  }
+
+  header img.logo {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0.5rem;
   }
   
   header h1 {
@@ -18,22 +25,49 @@ body {
     margin: 0;
   }
   
+  nav {
+    margin-top: 0.5rem;
+  }
+
   nav a {
-    color: white;
+    color: white; 
     margin: 0 1rem;
     text-decoration: none;
     font-weight: bold;
   }
   
   .hero {
-    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center center/cover;
-    color: white;
+    position: relative;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('images/hero-people.png') no-repeat center center/cover;
     text-align: center;
     padding: 4rem 2rem;
+    color: white;
+    animation: fadeIn 2s ease-in;
+    opacity: 0;
+    animation-fill-mode: forwards;
   }
   
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+   
   .hero h2 {
     font-size: 2rem;
+    color: aqua;
   }
   
   section {
@@ -42,8 +76,12 @@ body {
     margin: auto;
   }
   
-  h3 {
+  h2, h3 {
     color: #4c2a85;
+  }
+
+  a:hover {
+    color: #f9a825;
   }
   
   footer {
@@ -53,4 +91,29 @@ body {
     padding: 1rem;
     font-size: 0.9rem;
   }
+
+  .logo {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.5rem;
+    }
+  
+    nav a {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  }
+  
+
   
