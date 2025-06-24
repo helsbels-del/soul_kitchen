@@ -63,7 +63,7 @@ body {
     border-radius: 0.5rem;
     max-width: 800px;
     margin: 0 auto;
-    opacity: 0;
+    opacity: 50;
     animation: fadeIn 1.5s ease-in-out forwards;
   }
    
